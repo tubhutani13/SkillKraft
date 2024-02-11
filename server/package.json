@@ -1,0 +1,15 @@
+{
+  "name": "skillkraft",
+  "version": "1.0.0",
+  "description": "SkillKraft is a collaborative platform where developers exchange expertise, collaborate on coding projects, and foster skill development. With a vibrant community and intuitive tools, SkillKraft empowers developers to learn, share, and create together, driving innovation and growth in the tech industry.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Tushar Bhutani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
