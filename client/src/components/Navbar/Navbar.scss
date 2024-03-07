@@ -11,12 +11,16 @@ $blue: #080a45;
   border-style: solid;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Navbar Header */
 .navbarHeader {
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
-  position: fixed;
+  position: sticky;
   right: 0;
   align-items: center;
   flex-direction: column;
@@ -38,6 +42,7 @@ $blue: #080a45;
 
 /* Logo */
 .logo {
+  color: black;
   font-size: 2em;
   font-weight: 700;
   line-height: 150%;
@@ -142,6 +147,7 @@ $blue: #080a45;
 
   /* Hide Logo in Mobile Menu */
   .logo.hide {
+    display: none;
     opacity: 0;
   }
 
@@ -152,9 +158,7 @@ $blue: #080a45;
     width: 100%;
     height: 100vh;
     z-index: 100;
-    padding: 0px 24px;
     padding-bottom: 20px;
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -181,10 +185,11 @@ $blue: #080a45;
       align-items: flex-start;
       flex-direction: column;
       justify-content: center;
-
       /* Adjust margin for small body text */
       .bodySmall {
+        width: 100%;
         margin-bottom: 16px;
+        border-bottom:1px solid #080a45;
       }
     }
 

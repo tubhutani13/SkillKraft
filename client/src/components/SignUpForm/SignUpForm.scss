@@ -1,0 +1,76 @@
+.SignUpContainer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 40px auto;
+}
+.SignUpForm {
+  .password-input {
+    position: relative;
+
+    input[type="password"] {
+      padding-right: 40px;
+    }
+
+    .password-toggle {
+      position: absolute;
+      top: 30%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: black;
+    }
+  }
+}
+
+.SignUpForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.SignUpForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.SignUpForm button {
+  color: white;
+  background-color: #080a45;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SignUpForm button:hover {
+  background-color: #040721;
+}
+
+.error-list {
+  list-style: none;
+  padding: 0;
+}
+
+.error-list li {
+  margin-bottom: 5px;
+}
+
+.error-list .valid::before {
+  content: "\2714";
+  color: green;
+  margin-right: 5px;
+}
+
+.error-list .invalid::before {
+  content: "\2717";
+  color: red;
+  margin-right: 5px;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Navbar.scss"; // Import your CSS file for styling
+import { Link } from "react-router-dom";
+import "./Navbar.scss";
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,7 +13,9 @@ function NavBar() {
     <div className="container">
       <div className="navbarHeader">
         <header className="navbarContainer NavbarInteractive">
-          <span className={`logo ${showMenu ? 'hide' : '' }`}>SKILLKRAFT</span>
+          <Link to="/" className={`logo ${showMenu ? "hide" : ""}`}>
+            SKILLKRAFT
+          </Link>
           <div className="desktopMenu">
             <nav className="navbarLinks">
               <span className="bodySmall">Home</span>
@@ -22,20 +25,31 @@ function NavBar() {
               <span className="bodySmall">Contact</span>
             </nav>
             <div className="Buttons">
-              <button className="buttonFlat">Login</button>
-              <button className="buttonFilled">Register</button>
+              <Link to="/login" className="buttonFlat">
+                Login
+              </Link>
+              <Link to="/signup" className="buttonFilled">
+                Register
+              </Link>
             </div>
           </div>
-          <div className={`burgerMenu ${showMenu ? '' : 'show'}`} onClick={toggleMenu}>
+          <div
+            className={`burgerMenu ${showMenu ? "" : "show"}`}
+            onClick={toggleMenu}
+          >
             <svg viewBox="0 0 1024 1024" className="socialIcons">
               <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
             </svg>
           </div>
-          <div className={`mobileMenu ${showMenu ? 'show' : ''}`}>
+          <div className={`mobileMenu ${showMenu ? "show" : ""}`}>
             <nav>
               <div className="top">
-                <span className="logo">SKILLCRAFT</span>
-                <svg viewBox="0 0 1024 1024" className="socialIcons" onClick={toggleMenu}>
+                <span className="logo">SKILLKRAFT</span>
+                <svg
+                  viewBox="0 0 1024 1024"
+                  className="socialIcons"
+                  onClick={toggleMenu}
+                >
                   <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
                 </svg>
               </div>
